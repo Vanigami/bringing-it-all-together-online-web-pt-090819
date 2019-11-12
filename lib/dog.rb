@@ -52,14 +52,14 @@ class Dog
     end
 
     def self.find_by_name(name)
-      sql = <<-SQL 
-        SELECT * FROM dogs 
-        WHERE name = ? 
+      sql = <<-SQL
+        SELECT * FROM dogs
+        WHERE name = ?
         LIMIT 1
-        SQL 
+        SQL
         DB[:conn](sql, name).execute.map do |row|
           self.new_from_db(row)
-        end.first 
+        end.first
       end
 
 
