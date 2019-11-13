@@ -81,9 +81,9 @@ class Dog
         else
           dog = sef.create(name: name, breed: breed)
         end
-        dog 
+        dog
       end
 
-          
+
 
 end
